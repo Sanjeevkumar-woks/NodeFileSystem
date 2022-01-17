@@ -17,6 +17,8 @@ app.get("/",(request, response)=>{
      <li>To Add a File go To <span style="color:red">"/getCurrentTimeInTextFile"</span></li>
      <br>
      <li>To Retrive all the files in the Directory go to <span style="color:red">"/getFilesList"</span></li>
+     <br>
+     <li>To Read the currenty added File go to <span style="color:red">"/readAddedFile"</span></li>
      </ol>
      </h2>
      </h1>`)
