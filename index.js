@@ -82,6 +82,18 @@ app.get("/getFilesList",(request, response)=>{
     });
    
 
+  app.get("/readAddedFile",(request, response)=>{
+
+        fs.readFile(path,"utf-8",(err,data)=>{
+            if(err){
+                console.log(err);
+            }
+            response.send(`<p style="padding:15vh">
+                ${data}
+            </p>`);
+        });
+    });
+
 
 
      //to make express listen to the port
