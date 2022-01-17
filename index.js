@@ -71,7 +71,7 @@ app.get("/getFilesList",(request, response)=>{
             console.log(err);
         }
         //to show if the Reading is completed successfully
-        console.log("completed Reading");
+        console.log("Reading Dir completed");
         //sending response in return to show in document
         response.send(`<h1 style="padding:10vh;text-align:center">Files List in the Dierectory
         </br>
@@ -83,18 +83,22 @@ app.get("/getFilesList",(request, response)=>{
         
     });
    
-
-  app.get("/readAddedFile",(request, response)=>{
-
+//route path to perform readFile function
+    app.get("/readAddedFile",(request, response)=>{
+        //readFile function
         fs.readFile(path,"utf-8",(err,data)=>{
             if(err){
                 console.log(err);
             }
+            //to show if the Reading is completed successfully
+            console.log("File Reading completed");
+            //sending response in return to show in document
             response.send(`<p style="padding:15vh">
                 ${data}
             </p>`);
         });
     });
+
 
 
 
